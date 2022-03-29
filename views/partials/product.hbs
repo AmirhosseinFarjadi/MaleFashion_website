@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fa">
+   <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="/css/edite-form.css" type="text/css"/>
+      <title>ویرایش محصول</title>
+   </head>
+   <body>
+<div class="edite-form" >
+    {{#each BestProducts}}
+    <form action="/product/{{this._id}}?_method=PUT" method="POST" class="form-container">
+        <h1>{{this.title}}</h1>
+        <h1>{{this.price}}</h1>
+    <label for="title"><b>عنوان محصول</b></label>
+    <input type="text" name="title" placeholder="عنوان محصول" required><br>
+    
+    <label for="price"><b>قیمت</b></label>
+    <input type="text" placeholder="قیمت به تومان" name="price" required>
+   
+
+    <button type="submit" class="btn" >ذخیره</button>
+    <button type="button" class="btn cancel" onclick="location.href='/';">بازگشت</button>
+
+  </form>
+   {{/each}}
+</div>
+
+    </body>
+</html>

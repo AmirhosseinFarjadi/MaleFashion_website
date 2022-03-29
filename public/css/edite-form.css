@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'IRANSans';
+  src: url(/fonts/IRANSans/fonts/eot/IRANSansWeb.eot);
+  src:  url(/fonts/IRANSans/fonts/woff/IRANSansWeb.woff) format('woff') ,url(/fonts/IRANSans/fonts/woff2/IRANSansWeb.woff2) format('woff2'),  url(/fonts/IRANSans/fonts/ttf/IRANSansWeb.ttf) format('truetype') ;
+  font-weight: normal;
+  font-style: normal;
+}
+body{
+  background:#ecece9;
+  font-family: 'IRANSans';
+  margin:0}
+.edite-form {
+    direction: rtl;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  .edite-form h1{
+  text-align: center;
+  font-size: 20px;
+  
+  }
+  .edite-form label{
+    direction: rtl;
+    font-size: 20px;
+    text-align: right;
+    width: 100%;
+  }
+  .edite-form input{
+    direction: rtl;
+    font-size: 12px;
+    text-align: right;
+    font-family: 'IRANSans';
+  }
+  .form-container {
+        max-width: 50%;
+        padding: 10px;
+        background-color: white;
+        margin: 5% 25%;
+    }
+
+  
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 95%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  .form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    font-family: 'IRANSans';
+  }
+  
+  .form-container .cancel {
+    background-color: red;
+    font-family: 'IRANSans';
+
+  }
+  
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }

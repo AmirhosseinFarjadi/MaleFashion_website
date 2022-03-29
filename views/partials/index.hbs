@@ -1,0 +1,386 @@
+      <header class="header">
+         <div class="header__top">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-6 col-md-7">
+                     <div class="header__top__left">
+                        <p>ارسال رایگان، 30 روز ضمانت استرداد یا بازگشت مبلغ</p>
+                     </div>
+                  </div>
+                  <div class="col-lg-6 col-md-5">
+                     <div class="header__top__right">
+                        <div class="header__top__hover">
+                           <span>ریال <i class="arrow_carrot-down"></i></span>
+                           <ul>
+                              <li>ریال</li>
+                              <li>یورو</li>
+                              <li>دلار</li>
+                           </ul>
+                        </div>
+                        <div class="header__top__links">
+                           <a href="#">سوالات متداول</a>
+                           <a href="./authenticateForm">ورود</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+       
+            <div class="row">
+               <div class="col-lg-3 col-md-3">
+                  <div class="header__nav__option">
+                     <a href="#"><img src="images/icon/heart.png" alt=""></a>
+                     <div class="price">$0.00</div>
+                  </div>
+               </div>
+               <div class="col-lg-6 col-md-6">
+                  <nav class="header__menu mobile-menu">
+                     <ul>
+                        <li><a href="/contact">ارتباط با ما</a></li>
+                        <li><a href="/blog">بلاگ</a></li>
+                        <li><a href="/more">سایر</a></li>
+                        <li><a href="/shopping">خرید</a></li>
+                        <li class="active"><a href="/">خانه</a></li>  
+                     </ul>
+                  </nav>
+               </div>
+               <div class="col-lg-3 col-md-3">
+                  <div class="header__logo">
+                     <a href="/"><img src="images/logo.png" alt=""></a>
+                  </div>
+               </div>
+            </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+         </div>
+      </header>
+         <div class="hero__slider owl-carousel owl-loaded owl-drag">
+            <div class="owl-stage-outer">
+               <div class="owl-stage" style="transform: translate3d(-2997px, 0px, 0px); transition: all 0s ease 0s; width: 8994px;">
+                  <div class="owl-item cloned" style="width: 1498.89px;"></div>
+                  <div class="owl-item cloned" style="width: 1498.89px;"></div>
+                  <div class="owl-item active" style="width: 1498.89px;">
+                     <div class="hero__items set-bg"  style="background-image: url(images/slide.jpg);">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col-xl-5 col-lg-7 col-md-8">
+                                 <div class="hero__text">
+                                    <h6>کالکشن تابستانی</h6>
+                                    <h2>پاییزه - زمستانه</h2>
+                                    <h2>کالکشن 2020</h2>
+                                    <p>خاص لباس بپوشید</p>
+                                    <a href="/shopping" class="primary-btn" style="direction:rtl;text-align:right;">خرید کنید <span class="arrow_right"></span></a>
+                                    <div class="hero__social">
+                                       <a href="#"><i class="fa fa-facebook"></i></a>
+                                       <a href="#"><i class="fa fa-twitter"></i></a>
+                                       <a href="#"><i class="fa fa-pinterest"></i></a>
+                                       <a href="#"><i class="fa fa-instagram"></i></a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section> 
+      <section class="banner spad">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-7 offset-lg-4">
+                  <div class="banner__item">
+                     <div class="banner__item__pic">
+                        <img src="images/banner/banner-1.jpg" alt="">
+                     </div>
+                     <div class="banner__item__text">
+                        <h2> پوشاک کالکشن 2020</h2>
+                        <a href="/shopping">خرید</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-5">
+                  <div class="banner__item banner__item--middle">
+                     <div class="banner__item__pic">
+                        <img src="images/banner/banner-2.jpg" alt="">
+                     </div>
+                     <div class="banner__item__text">
+                        <h2>لوازم جانبی</h2>
+                        <a href="/shopping">خرید</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-7">
+                  <div class="banner__item banner__item--last">
+                     <div class="banner__item__pic">
+                        <img src="images/banner/banner-3.jpg" alt="">
+                     </div>
+                     <div class="banner__item__text">
+                        <h2>کفش های بهاره 2020</h2>
+                        <a href="/shopping">خرید</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      
+      <div class="filterBox">
+         <input type="radio" id="best" name="color" checked/>
+         <label for="best">پرفروش ترین</label>
+         <input type="radio" id="new" name="color"/>
+         <label for="new">جدیدترین</label>
+         <input type="radio" id="hot" name="color"/>
+         <label for="hot">پربازدیدترین</label>
+          {{#each BestProducts}}
+            <div style="background-image: url({{this.image}});"; class="tile best">
+               <form action="/{{this._id}}?_method=DELETE" method="POST">
+               <input type="submit" value="حذف" >
+               <input type="button" onclick="location.href='/product/{{this._id}}';" value="ویرایش" />
+
+               <div class="text">
+                  {{this.title}}
+               </div>
+               <div class="price">
+                  {{this.price}} <span>تومان</span>
+               </div>
+               </form>
+            </div>
+         {{/each}}
+         {{#each NewProducts}}
+         <div style="background-image: url({{this.image}});"; class="tile new">
+            <div class="text">
+               {{this.title}}
+            </div>
+            <div class="price">
+               {{this.price}} <span>تومان</span>
+            </div>
+         </div>
+         {{/each}}
+         {{#each HotProducts}}
+         <div style="background-image: url({{this.image}});"; class="tile hot">
+            <div class="text">
+               {{this.title}}
+            </div>
+            <div class="price">
+               {{this.price}} <span>تومان</span>
+            </div>
+         </div>
+         {{/each}}
+      </div>
+      <section class="categories spad">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-3">
+                  <div class="categories__text">
+                     <h2>پرفروش ترین پوشاک<br/> <span>کالکشن کفش</span> <br/>لوازم جانبی</h2>
+                  </div>
+               </div>
+               <div class="col-lg-4">
+                  <div class="categories__hot__deal">
+                     <img src="images/product-sale.png" alt="">
+                     <div class="hot__deal__sticker">
+                        <span>تخفیف</span>
+                        <h5>100000T</h5>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 offset-lg-1">
+                  <div class="categories__deal__countdown">
+                     <span>پیشنهاد هفته</span>
+                     <h2>کیف مدل چند جیب</h2>
+                     <div class="clock">
+                        <div class="categories__deal__countdown__timer" id="countdown">
+                           <div class="cd-item">
+                              <span>03</span>
+                              <p>روز</p>
+                           </div>
+                           <div class="cd-item">
+                              <span>05</span>
+                              <p>ساعت</p>
+                           </div>
+                           <div class="cd-item">
+                              <ol class="first">
+                                 <li>00</li>
+                                 <li>01</li>
+                              </ol>
+                              <p>دقیقه</p>
+                           </div>
+                           <div class="cd-item">
+                              <ol class="tens">
+                                 <li>0</li>
+                                 <li>1</li>
+                                 <li>2</li>
+                                 <li>3</li>
+                                 <li>4</li>
+                                 <li>5</li>
+                                 <li>0</li>
+                              </ol>
+                              <ol class="digits">
+                                 <li>1</li>
+                                 <li>2</li>
+                                 <li>3</li>
+                                 <li>4</li>
+                                 <li>5</li>
+                                 <li>6</li>
+                                 <li>7</li>
+                                 <li>8</li>
+                                 <li>9</li>
+                                 <li>0</li>
+                              </ol>
+                              <p>ثانیه</p>
+                           </div>
+                        </div>
+                     </div>
+                     <a href="#" class="primary-btn">خرید کنید</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="instagram spad">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-4">
+                  <div class="instagram__text">
+                     <h2>اینستاگرام</h2>
+                     <p>جهت کسب اطلاعات بیشتر لطفا از صفحه رسمی ما بازدید نمایید
+                     </p>
+                     <h3>#پوشاک_آقایان</h3>
+                  </div>
+               </div>
+               <div class="col-lg-8">
+                  <div class="instagram__pic">
+                     <div class="instagram__pic__item set--"  style="background-image: url(images/instagram/instagram-1.jpg)";></div>
+                     <div class="instagram__pic__item set-bg" style="background-image: url(images/instagram/instagram-4.jpg)";></div>
+                     <div class="instagram__pic__item set-bg" style="background-image: url(images/instagram/instagram-3.jpg)";></div>
+                     <div class="instagram__pic__item set-bg" style="background-image: url(images/instagram/instagram-2.jpg)";></div>
+                     <div class="instagram__pic__item set-bg" style="background-image: url(images/instagram/instagram-5.jpg)";></div>
+                     <div class="instagram__pic__item set-bg" style="background-image: url(images/instagram/instagram-6.jpg)";></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="latest spad">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="section-title">
+                     <span>اخرین خبرها</span>
+                     <h2>تازه های مد</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="blog__item">
+                     <div class="blog__item__pic set-bg"  style="background-image: url(images/blog/blog-1.jpg)";></div>
+                     <div class="blog__item__text">
+                        <span><img src="images/icon/calendar.png" alt=""  Style ="float: right;"> شانزدهم مرداد 99 </span>
+                        <h5>کمپانی گوچی از گران ترین لباس خود رونمایی کرد </h5>
+                        <a href="/blog">بیشتر</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="blog__item">
+                     <div class="blog__item__pic set-bg" style="background-image: url(images/blog/blog-2.jpg)";></div>
+                     <div class="blog__item__text">
+                        <span><img src="images/icon/calendar.png" alt=""> هفدهم شهریور 99</span>
+                        <h5>تیشرت های مردانه نایک بهترین در دنیا </h5>
+                        <a href="/blog">بیشتر</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="blog__item">
+                     <div class="blog__item__pic set-bg"  style="background-image: url(images/blog/blog-3.jpg)";></div>
+                     <div class="blog__item__text">
+                        <span><img src="images/icon/calendar.png" alt="" Style ="float: right;">سیزدهم مهر 99</span>
+                        <h5>مزایای عینک های آفتابی برای سلامتی چشم</h5>
+                        <a href="/blog">بیشتر</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+     <button class="open-button" onclick="openForm()">افزودن محصول جدید</button>
+
+<div class="form-popup" id="myForm">
+    <form action="/" method="POST" class="form-container">
+    <h1>اطلاعات محصول</h1><br>
+
+    <label for="title"><b>عنوان محصول</b></label>
+    <input type="text" name="title" placeholder="عنوان محصول" required><br>
+    
+    <label for="price"><b>قیمت</b></label>
+    <input type="text" placeholder="قیمت به تومان" name="price" required>
+   
+
+    <button type="submit" class="btn">ذخیره</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">انصراف</button>
+
+  </form>
+</div>
+   <footer class="footer">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+               <div class="footer__about">
+                  <div class="footer__logo">
+                     <a href="#"><img src="images/footer-logo.png" alt=""></a>
+                  </div>
+                  <p>در کسب و کار ما مهمترین چیز طراحی مدرن برای مشتری است</p>
+                  <a href="#"><img src="images/payment.png" alt=""></a>
+               </div>
+            </div>
+            <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+               <div class="footer__widget">
+                  <h6>خرید</h6>
+                  <ul >
+                     <li><a href="/shopping">فروشگاه لباس</a></li>
+                     <li><a href="/shopping">پرفروش ترین کفش</a></li>
+                     <li><a href="/shopping">لوازم جانبی</a></li>
+                     <li><a href="/shopping">فروش</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6">
+               <div class="footer__widget">
+                  <h6>خرید</h6>
+                  <ul>
+                     <li><a href="/contact">ارتباط با ما</a></li>
+                     <li><a href="#">شیوه های پرداخت</a></li>
+                     <li><a href="#">ارسال مرسوله</a></li>
+                     <li><a href="#">تعویض و بازگشت کالا</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+               <div class="footer__widget">
+                  <h6>اخبار جدید</h6>
+                  <div class="footer__newslatter">
+                     <p>اخبار تازه های مد و کالکشن های جدید ما را اولین نفر دریافت کنید</p>
+                     <form action="#">
+                        <input type="text" placeholder="ایمیل">
+               
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-lg-12 text-center">
+               <div class="footer__copyright__text">
+                  <p>
+                     طراحی و اجرا توسط <strong>سید امیرحسین فرجادی</strong> و <strong>علیرضا شاکری نژاد</strong>
+                     </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+</html>
